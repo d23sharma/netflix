@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.navbar {
+    width: 100%;
+    height: 5rem;
+    background-color: #000;
+}
+
+.sidebar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #000;
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.sidebar-menu {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    padding: 0 5rem;
+}
+
+.logo-container{
+    flex: 2;
+    color: #4dbf00;
+}
+
+.logo{
+    font-family: 'Sen', sans-serif;
+
+}
+
+.menu-container{
+    flex: 8;
+}
+
+.menu-list {
+    display: flex;
+}
+
+.menu-list-item {
+    list-style: none;
+    margin-right: 4rem;
+}
+
+.menu-list-item:first-child{
+    margin-left: 3rem;
+}
+
+.menu-list-item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.profile-container{
+ flex: 2;
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+}
+
+.profile-picture {
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-text-container {
+    margin: 0 2rem;
+}
+
+.toggle {
+    width: 4rem;
+    height: 2rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.toggle-ball {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #000;
+    position: absolute;
+    right: .1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main{
+    min-height: calc(100vh - 5rem);
+    background-color: #151515;
+    padding-left: 5rem;
+}
+
+.container {
+    /* margin-left: 5rem; */
+}
+
+.featured-content {
+    height: 50vh;
+    padding: 5rem;
+}
+
+.featured-image {
+    width: 20rem;
+    margin-bottom: 5rem;;
+}
+
+.feature-desc{
+    width: 40vw;
+    color: #eee;
+    font-weight: lighter;
+    margin-bottom: 5rem;
+}
+
+.left-space {
+    margin-left: 3rem;
+}
+
+.featured-button{
+    padding: 1rem 3rem;
+    background-color: #4dbf00;
+    color: #fff;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.movie-list-title{
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.movie-list-title:first-child {
+    margin-left: 3rem;
+}
+
+.movie-list-item-img {
+    width: 29rem;
+    height: 20rem;
+    border-radius: 2rem;
+    transition: all 1s ease;
+}
+
+.movie-list {
+    display: flex;
+    height: 30rem;
+    transform: translateX(0);  
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+    margin-right: 3rem;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img  {
+    transform: scale(1.2);
+    margin: 0 3rem;
+}
+
+.movie-list-item:first-child{
+    margin-left: 3rem;
+}
+.movie-list-item-title {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 2.5rem;
+    border-bottom-color: crimson;
+}
+
+.sub {
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    background-image: linear-gradient(rgba(0,0,0,.2), #151515);
+    padding: 2rem 1rem; 
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+    width: 22rem;
+}
+
+.sub:hover {
+    opacity: 1;
+}
+
+.movie-list-item-decs {
+    color: #fff;
+}
+
+.movie-list-item-btn {
+    padding: .8rem 3rem;
+    background-color: #4dbf00;
+    border-radius: .5rem;
+    display: inline-block;
+    margin-top: .5rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+}
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+    
+}
+.arrow {
+    font-size: 8rem;
+    color: #e1e1e1;
+    position: absolute;
+    bottom: 16rem;
+    right: 5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .menu-container{
+        display: none;
+    }
+    .movie-list-item-img {
+        width: 35rem;
+        height: 28rem;
+    }
+    .arrow{
+        bottom: 12rem;
+    }
+}
+
+@media (max-width: 600px){
+    .movie-list-item-img {
+        width: 46rem;
+        height: 28rem;
+    }
+
+@media (max-width: 425px){
+    .movie-list-item-img {
+        width: 20rem;
+        height: 25rem;
+    }    
+}
